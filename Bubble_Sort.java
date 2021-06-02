@@ -16,14 +16,16 @@ public class Bubble_Sort {
 		
 		int temp = 0;
 		
+		
+		
+		
 		//Bubble Sort Logic
-		for(int i=0;i<size;i++) {
-			for(int j=i+1;j<size;j++) {
-				if(elements[i]<elements[j]) {
-					
-				temp = elements[i];
-				elements[i] = elements[j];
-				elements[j] = temp;
+		for (int i=0;i<size-1;i++){
+			for(int j=0;j<size-1;j++) {
+				if(elements[j]>elements[j+1]) {
+					temp=elements[j];
+					elements[j] = elements[j+1];
+					elements[j+1] = temp;
 				}
 			}
 			System.out.print("After pass "+i+" : ");
@@ -31,10 +33,12 @@ public class Bubble_Sort {
 				System.out.print(k+"\t");
 			}
 			System.out.println();
-			
+		
 		}
 		
-		//Displaying the elements in DESC Order after bubble sorting
+		
+		//Displaying the elements in ASC Order after bubble sorting
+		System.out.println("Elements sorted successfully after bubble sorting are : ");
 		for(int i=0;i<size;i++) {
 			System.out.print(elements[i]+"\t");
 		}
